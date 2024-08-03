@@ -1,0 +1,246 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --theme-color-1:#0f0f0f;
+    --theme-color-2:#717171;
+    --theme-color-3:#212121;
+    --theme-color-3-little-transparent:#2121213d;
+}
+body{
+    background-color: var(--theme-color-1);
+}
+
+html{
+    font-size: 62.5%;
+}
+/* =============================================== */
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
+    grid-template-rows: repeat(auto-fit,minmax(2rem,10rem));
+    
+}
+
+/* =============================================== */
+/* Nav Bar */
+
+.nav{
+    /* border: 0.1rem solid white; */
+    grid-row: 1/span 10;
+    position: relative;
+}
+
+.nav a:not(:nth-child(1)){
+    display: flex;
+    flex-direction: column;
+    margin-top: 6rem;
+    margin-left: 3rem;
+    position: relative;
+    top: -3rem;
+}
+
+.nav a img{
+    width: 20%;
+}
+
+.logo{
+    width: 100%;
+    position: absolute;
+    top: 2.5rem;
+    right: -8.5rem;
+}
+
+.logo::after{
+    content: "YouTube";
+    position: absolute;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: -0.3rem;
+    top: 0.5rem;
+    transform: scaleY(1.1);
+}
+
+.nav :nth-child(3)::after{
+    content: "Home";
+    position: absolute;
+    bottom: -3rem;
+    left: 0.4rem;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav :nth-child(4)::after{
+    content: "Upload";
+    position: absolute;
+    bottom: -3rem;
+    left: 0.1rem;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav :nth-child(5)::after{
+    content: "Settings";
+    position: absolute;
+    bottom: -3rem;
+    color: white;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+/* Nav Bar */
+/* =============================================== */
+/* Header Bar */
+
+.header{
+    grid-column: 2 / span 9;
+    /* border: 0.1rem solid white; */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-bar{
+    background-color: var(--theme-color-1);
+    border: 0.2rem solid var(--theme-color-3);
+    outline: transparent;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 1rem 40rem 1rem 2rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+}
+
+.search-button{
+    width: 2.8%;
+    background-color: var(--theme-color-3);
+    border: transparent;
+    padding: 0.3rem 2rem;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    transition: 0.1s;
+    transform: scale(1.8);
+    display: flex;
+    justify-content: center;
+}
+
+.search-button img {
+    width: 2rem;
+}
+.search-button:hover{
+    cursor: pointer;
+    background-color: var(--theme-color-3);
+    opacity:1;
+}
+
+
+.mic-button img{
+    filter: invert();
+}
+
+.mic-button{
+    background-color: var(--theme-color-3);
+    border: transparent;
+    border-radius: 10rem;
+    transform: scale(0.35);
+}
+
+.mic-button:hover{
+    cursor: pointer;
+    background-color: var(--theme-color-3);
+    opacity:1;
+}
+
+.header-container-mini{
+    grid-area: header2;
+    width: 40%;
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+}
+
+.header-container-mini a{
+    width: 8%;
+}
+
+.header-container-mini :nth-child(1) img {
+    width:50%;
+}
+.header-container-mini :nth-child(2) img {
+    width:50%;
+}
+.header-container-mini :nth-child(3) img {
+    width:80%;
+}
+
+
+/* Header Bar */
+/* =============================================== */
+
+/* Container */
+.container{
+    grid-column: 2/ span 9;
+    border: 0.1rem solid white;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 5rem;
+}
+
+.container div{
+    margin: 5rem 2rem;
+    width: 22%;
+    height: 30vh;
+}
+.container :nth-child(1){
+    
+    background-color: green;
+}
+.container :nth-child(2){
+    
+    background-color: orange;
+}
+.container :nth-child(3){
+    
+    background-color: lightgreen;
+}
+.container :nth-child(4){
+    
+    background-color: lightblue;
+}
+.container :nth-child(5){
+    
+    background-color: violet;
+}
+.container :nth-child(6){
+    
+    background-color: darkred;
+}
+.container :nth-child(7){
+    
+    background-color: darkblue;
+}
+.container :nth-child(8){
+    
+    background-color: darkmagenta;
+}
+
+/* Container */
