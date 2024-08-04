@@ -7,6 +7,7 @@
     --theme-color-2:#717171;
     --theme-color-3:#212121;
     --theme-color-3-little-transparent:#2121213d;
+    --text-color-1:#363636;
 }
 body{
     background-color: var(--theme-color-1);
@@ -18,7 +19,7 @@ html{
 /* =============================================== */
 .grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(10rem,20rem));
+    grid-template-columns: 5% repeat(auto-fit,minmax(10rem,20rem));
     grid-template-rows: repeat(auto-fit,minmax(2rem,10rem));
     
 }
@@ -28,6 +29,7 @@ html{
 
 .nav{
     /* border: 0.1rem solid white; */
+    
     grid-row: 1/span 10;
     position: relative;
 }
@@ -42,7 +44,7 @@ html{
 }
 
 .nav a img{
-    width: 20%;
+    width: 40%;
 }
 
 .logo{
@@ -68,7 +70,7 @@ html{
     content: "Home";
     position: absolute;
     bottom: -3rem;
-    left: 0.4rem;
+    left: -0.2rem;
     color: white;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.2rem;
@@ -79,7 +81,7 @@ html{
     content: "Upload";
     position: absolute;
     bottom: -3rem;
-    left: 0.1rem;
+    left: -0.3rem;
     color: white;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.2rem;
@@ -90,6 +92,7 @@ html{
     content: "Settings";
     position: absolute;
     bottom: -3rem;
+    left: -0.8rem;
     color: white;
     font-family: "Roboto Condensed", sans-serif;
     font-size: 1.2rem;
@@ -195,7 +198,28 @@ html{
 
 /* Header Bar */
 /* =============================================== */
+/* Categories Bar */
 
+.categories{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+}
+
+.categories a{
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--theme-color-3);
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+}
+
+/* Categories Bar */
+/* =============================================== */
 /* Container */
 .container{
     grid-column: 2/ span 9;
@@ -204,43 +228,94 @@ html{
     flex-wrap: wrap;
     padding-left: 5rem;
 }
-
-.container div{
-    margin: 5rem 2rem;
-    width: 22%;
-    height: 30vh;
-}
-.container :nth-child(1){
-    
-    background-color: green;
-}
-.container :nth-child(2){
-    
-    background-color: orange;
-}
-.container :nth-child(3){
-    
-    background-color: lightgreen;
-}
-.container :nth-child(4){
-    
-    background-color: lightblue;
-}
-.container :nth-child(5){
-    
-    background-color: violet;
-}
-.container :nth-child(6){
-    
-    background-color: darkred;
-}
-.container :nth-child(7){
-    
-    background-color: darkblue;
-}
-.container :nth-child(8){
-    
-    background-color: darkmagenta;
+.video{
+    display: flex;
+    width: 30%;
+    height: 35vh;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
 }
 
+.video-thumbnail{
+    width: 70%;
+    height: 22vh;
+    margin-top: 0.5rem;
+}
+
+.video-thumbnail span{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    background-color: var(--theme-color-3);
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    top: -4rem;
+    left: 31rem;
+    opacity: 0.9;
+}
+.img-1{
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.video-icon{
+    width: 20%;
+}
+.video-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+}
+
+.video-container a img{
+    border-radius: 5rem;
+}
+
+.video-header{
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+}
+
+.video-header :nth-child(3){
+    font-size: 1.5rem; 
+    margin-top: 1rem;
+    opacity: 0.7;
+    font-weight: 400;
+    display: flex;
+
+}
+.video-header :nth-child(2){
+    font-size: 1.5rem; 
+    margin-top: 1rem;
+    opacity: 0.7;
+    font-weight: 400;
+    display: flex;   
+}
+
+.video-header :nth-child(2) img{
+    width: 4%;
+    margin-left: 1rem;
+}
+.channel-name{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    top: -2rem;
+    left: -15rem;
+    opacity: 0.8;
+}
 /* Container */
