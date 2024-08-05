@@ -226,22 +226,24 @@ html{
     border: 0.1rem solid white;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 5rem;
+
 }
 .video{
     display: flex;
-    width: 30%;
+    width: 22%;
     height: 35vh;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
+    transition: 0.2s;
 }
 
 .video-thumbnail{
-    width: 70%;
+    width: 90%;
     height: 22vh;
     margin-top: 0.5rem;
 }
+
 
 .video-thumbnail span{
     position: relative;
@@ -254,12 +256,18 @@ html{
     padding: 0.8rem;
     border-radius: 0.5rem;
     top: -4rem;
-    left: 31rem;
+    left: 30rem;
     opacity: 0.9;
 }
 .img-1{
     width: 100%;
     border-radius: 1rem;
+    transition: 0.2s;
+}
+
+.img-1:hover{
+    border-radius: 0;
+    transform: scale(1.01);
 }
 
 .video-icon{
