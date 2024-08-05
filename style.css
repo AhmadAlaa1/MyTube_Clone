@@ -6,6 +6,7 @@
     --theme-color-1:#0f0f0f;
     --theme-color-2:#717171;
     --theme-color-3:#212121;
+    --theme-color-3-lighter:#383838;
     --theme-color-3-little-transparent:#2121213d;
     --text-color-1:#363636;
 }
@@ -38,19 +39,33 @@ html{
     display: flex;
     flex-direction: column;
     margin-top: 6rem;
-    margin-left: 3rem;
+    margin-left: 3.5rem;
     position: relative;
     top: -3rem;
 }
 
+.menu-button{
+    background-color: transparent;
+    border: transparent;
+    margin-top: 2.5rem; 
+    opacity: 0.9;
+}
+
+.menu-button:hover{
+    cursor: pointer;
+}
+.menu-button img{
+    width: 35%;
+}
+
 .nav a img{
-    width: 40%;
+    width: 45%;
 }
 
 .logo{
     width: 100%;
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     right: -8.5rem;
 }
 
@@ -62,7 +77,7 @@ html{
     font-size: 2.5rem;
     font-weight: 500;
     letter-spacing: -0.3rem;
-    top: 0.5rem;
+    top: 0.8rem;
     transform: scaleY(1.1);
 }
 
@@ -203,7 +218,6 @@ html{
 .categories{
     grid-column: span 3;
     display: flex;
-    justify-content: space-between;
     margin: 2rem 0rem;
 }
 
@@ -215,7 +229,14 @@ html{
     font-weight: bold;
     background-color: var(--theme-color-3);
     padding: 1rem 2rem;
+    margin-left: 2rem;
     border-radius: 1rem;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.categories a:hover{
+    background-color: var(--theme-color-3-lighter);
 }
 
 /* Categories Bar */
@@ -223,7 +244,7 @@ html{
 /* Container */
 .container{
     grid-column: 2/ span 9;
-    border: 0.1rem solid white;
+    /* border: 0.1rem solid white; */
     display: flex;
     flex-wrap: wrap;
 
@@ -231,7 +252,7 @@ html{
 .video{
     display: flex;
     width: 22%;
-    height: 35vh;
+    height: 38vh;
     flex-direction: column;
     align-items: center;
     margin: 2rem;
@@ -242,11 +263,12 @@ html{
     width: 90%;
     height: 22vh;
     margin-top: 0.5rem;
+    position: relative;
 }
 
 
 .video-thumbnail span{
-    position: relative;
+    position: absolute;
     color: white;
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -255,8 +277,8 @@ html{
     background-color: var(--theme-color-3);
     padding: 0.8rem;
     border-radius: 0.5rem;
-    top: -4rem;
-    left: 30rem;
+    bottom: 0.5rem;
+    right: 0.2rem;
     opacity: 0.9;
 }
 .img-1{
@@ -307,10 +329,33 @@ html{
     opacity: 0.7;
     font-weight: 400;
     display: flex;   
+    transition: 0.1s;
+    position: relative;
 }
 
+.video-header :nth-child(2)::after{
+    content: "Elzero Web School";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    padding: 1rem 1rem 1rem 2rem;
+    background-color: var(--theme-color-2);
+    color: white;
+    top: -7rem;
+    left: 0;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+.video-header :nth-child(2):hover{
+    opacity: 1;
+}
+
+.video-header :nth-child(2):hover::after{
+    display: inline;
+}
 .video-header :nth-child(2) img{
-    width: 4%;
+    width: 5.5%;
     margin-left: 1rem;
 }
 .channel-name{
