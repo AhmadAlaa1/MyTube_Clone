@@ -114,6 +114,8 @@ html{
     font-weight: 700;
 }
 
+
+
 /* Nav Bar */
 /* =============================================== */
 /* Header Bar */
@@ -372,3 +374,61 @@ html{
     opacity: 0.8;
 }
 /* Container */
+
+@media (max-width:674px){
+    .nav{
+        display: none;
+    }
+    .container{
+        flex-direction: column;
+        align-content: center;
+    }   
+    .categories{
+        overflow: scroll;
+        grid-column: 5;
+        width: 30rem;
+        margin-right: 15rem;
+    }
+    .video-icon{
+        position: relative;
+        right: 3rem;
+    }
+    .video-header{
+        font-size: 1.5rem;
+    }
+    .video-header :nth-child(1){
+        position: relative;
+        left: 0rem;
+        width: 20rem;
+        
+    }
+    .video-header :nth-child(2) img{
+        width: 10%;
+    }
+
+    .video-thumbnail{
+        transform: scale(2);
+        margin-top: 12rem;
+    }
+
+    .video-thumbnail span{
+        position: absolute;
+        transform: scale(0.7);
+        bottom: 0rem;
+        right: -1rem;
+    }
+    .video-container{
+        margin-top:7rem;
+    }
+    .search-bar{
+        padding: 1rem 0rem 1rem 2rem;
+        margin-left: 6rem;
+        font-size: 1.5rem;
+    }
+    .search-button{
+        transform: scale(1.6);
+    }
+    .header-container-mini{
+        display: none;
+    }
+}
