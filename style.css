@@ -172,6 +172,7 @@ html{
 
 .mic-button img{
     filter: invert();
+
 }
 
 .mic-button{
@@ -246,7 +247,6 @@ html{
 /* Container */
 .container{
     grid-column: 2/ span 9;
-    /* border: 0.1rem solid white; */
     display: flex;
     flex-wrap: wrap;
 
@@ -384,10 +384,10 @@ html{
         align-content: center;
     }   
     .categories{
-        overflow: scroll;
         grid-column: 5;
-        width: 30rem;
-        margin-right: 15rem;
+        position: relative;
+        right: 7rem;
+        transform: scale(0.9);
     }
     .video-icon{
         position: relative;
@@ -407,15 +407,19 @@ html{
     }
 
     .video-thumbnail{
-        transform: scale(2);
+        transform: scale(2.5);
         margin-top: 12rem;
+    }
+
+    .video-thumbnail img{
+        border-radius: 0rem;
     }
 
     .video-thumbnail span{
         position: absolute;
-        transform: scale(0.7);
-        bottom: 0rem;
-        right: -1rem;
+        transform: scale(0.4);
+        bottom: -1rem;
+        right: -3rem;
     }
     .video-container{
         margin-top:7rem;
@@ -427,8 +431,12 @@ html{
     }
     .search-button{
         transform: scale(1.6);
+        cursor: pointer;
     }
     .header-container-mini{
-        display: none;
+        /* display: none; */
+        transform: scale(2.5);
+        margin-top: 2rem;
+        margin-right: 10rem;
     }
 }

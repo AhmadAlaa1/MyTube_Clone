@@ -1,3 +1,4 @@
+// ================== Fetching Video Data From Json File ==========================//
 let server = new XMLHttpRequest();
 
 server.open("GET","videos.json",true);
@@ -34,3 +35,5 @@ server.onload = function(){
         document.querySelector(".container").innerHTML = output;
     }
 }
+
+// ================== Fetching Video Data From Json File ==========================//
